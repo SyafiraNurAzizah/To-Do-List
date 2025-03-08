@@ -1,0 +1,61 @@
+html, body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    border: 1px solid rgb(17, 17, 17);
+    border-radius: 10px;
+    width: 90%;
+    max-width: 300px;
+    min-height: 250px;
+    height: auto;
+    padding: 15px 35px 30px 35px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container h2 {
+    text-align: center;
+    padding-bottom: 5px;
+    letter-spacing: 1px;
+}
+.container label {
+    font-size: 0.9rem;
+    position: relative;
+    left: -7px;
+}
+.container input {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(17, 17, 17);
+    border-radius: 7px;
+    position: relative;
+    left: -7px;
+    width: calc(100% + 15px);
+    height: 35px;
+    padding: 10px;
+    box-sizing: border-box;
+    /* letter-spacing: 0.5px; */
+}
+.container button {
+    background-color: rgb(17, 17, 17, 0.9);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    position: relative;
+    left: -7px;
+    width: calc(100% + 15px);
+    height: 40px;
+    box-sizing: border-box;
+}
+.container p {
+    font-size: 0.9rem;
+    color: rgb(17, 17, 17);
+}
+.container a {
+    text-decoration: none;
+    color: rgb(17, 17, 17);
+}
