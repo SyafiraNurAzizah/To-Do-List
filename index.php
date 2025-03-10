@@ -43,7 +43,7 @@ $query = mysqli_query($koneksi, $sql);
 
     <div class="subnav">
         <div class="left-subnav">
-            <p><a href="index.php" class="active">Board view</a></p>
+            <p class="active"><a href="index.php">Board view</a></p>
             <p><a href="tambah.php">Add view</a></p>
         </div>
 

@@ -24,8 +24,14 @@ if (!isset($_SESSION['id_user'])) {
     <?php include "navbar.php" ?>
 
     <div class="subnav">
-        <p><a href="index.php">Board view</a></p>
-        <p><a href="tambah.php" class="active">Add view</a></p>
+        <div class="sub-subnav">
+            <p><a href="index.php">Board view</a></p>
+            <p class="active"><a href="tambah.php">Add view</a></p>
+        </div>
+
+        <div class="right-subnav">
+            /
+        </div>
     </div>
 
     <div class="content">
