@@ -12,7 +12,7 @@
     <li><b>Bahasa Pemrograman</b>: PHP (Native, tanpa framework)</li>
     <li><b>Database</b>: MySQL</li>
     <li><b>Front-End</b>: HTML, CSS, JavaScript</li>
-    <li><b>Back</b>: PHP</li>
+    <li><b>Back-End</b>: PHP</li>
 </ul>
 
 <br>
