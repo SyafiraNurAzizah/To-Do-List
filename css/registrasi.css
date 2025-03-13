@@ -3,71 +3,96 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #EAEAEC;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .container {
-    width: 100%;
-    max-width: 300px;
-    min-height: 200px;
-    height: auto;
-    padding: 0px 100px 30px 100px;
-    border: none;
+    border: 1px solid rgb(17, 17, 17);
     border-radius: 10px;
-    background-color: #FFFFFF;
-    color: #0D0D0F;
-    box-shadow: 2px 2px 2px #DBDBDB;
+    width: 90%;
+    /* max-width: 500px; */
+    /* min-height: 250px; */
+    height: auto;
+    padding: 15px 0 0 35px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: space-between;
 }
-.container h1{
-    position: relative;
-    left: -70px;
+.container h2 {
+    text-align: center;
+    padding-bottom: 5px;
+    letter-spacing: 1px;
+    text-wrap: nowrap;
 }
-.container p {
+.container .left {
+    float: left;
     position: relative;
-    left: -70px;
-    bottom: 15px;
+    top: 100px;
+    right: 90px;
+}
+.container .left label {
     font-size: 0.9rem;
-}
-.container label {
     position: relative;
-    left: -70px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: #0D0D0F;
+    left: -7px;
 }
-.container input {
-    height: 33px;
-    width: calc(100% + 135px);
-    position: relative;
-    left: -70px;
-    border: none;
-    border-radius: 5px;
-    background-color: #F3F2F7;
+.container .left input {
     margin-top: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(17, 17, 17);
+    border-radius: 7px;
+    position: relative;
+    left: -7px;
+    width: calc(100% + 75px);
+    height: 35px;
     padding: 10px;
     box-sizing: border-box;
 }
-.container button {
-    float: right;
+
+.container .right {
+    float: right;  
     position: relative;
-    left: 65px;
-    top: 15px;
-    padding: 10px 20px 10px 20px;
-    border: none;
-    border-radius: 20px;
-    color: #FFFFFF;
-    background-color: #0D0D0F;
+    left: 125px;
+    bottom: 128px; 
 }
-.container .sign-in {
-    position: relative;
-    left: -70px;
-    top: 8px;
+.container .right label {
     font-size: 0.9rem;
+    position: relative;
+    left: -7px;
+}
+.container .right input {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(17, 17, 17);
+    border-radius: 7px;
+    position: relative;
+    left: -7px;
+    width: calc(100% + 75px);
+    height: 35px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.container .right button {
+    background-color: rgb(17, 17, 17, 0.9);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    margin-top: 25px;
+    margin-bottom: 5px;
+    position: relative;
+    left: -7px;
+    width: calc(100% + 75px);
+    height: 40px;
+    box-sizing: border-box;
+}
+
+.container p {
+    position: relative;
+    top: 350px;
+    right: 441px;
+    font-size: 0.9rem;
+    color: rgb(17, 17, 17);
     text-wrap: nowrap;
 }
-.container .sign-in a {
-    color: #0D0D0F;
+.container a {
     text-decoration: none;
+    color: rgb(17, 17, 17);
 }
