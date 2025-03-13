@@ -43,6 +43,6 @@
   <ul>
     <li>Pastikan server lokal seperti XAMPP atau Laragon sudah aktif</li>
     <li>Pindahkan folder proyek ke dalam direktori htdocs (jika menggunakan XAMPP), atau ke www (jika menggunakan Laragon)</li>
-    <li>Buka browser dan akses http://localhost/app_todolist/</li>
+    <li>Buka browser dan akses http://localhost/to-do-list/</li>
   </ul>
 </ol>
