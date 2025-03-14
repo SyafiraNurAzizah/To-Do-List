@@ -32,7 +32,9 @@
 <p>Ikuti langkah-langkah berikut untuk menjalankan proyek ini secara lokal:</p>
 <ol>
   <li>Menandai tugas yang sudah selesai</li>
-  <p><b>git clone https://github.com/SyafiraNurAzizah/To-Do-List</b></p>
+    
+    git clone https://github.com/SyafiraNurAzizah/To-Do-List
+    
   <li>Konfigurasi Database (Opsional)</li>
   <ul>
     <li>Buat database baru di MySQL</li>
