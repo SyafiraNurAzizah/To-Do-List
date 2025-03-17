@@ -4,7 +4,7 @@ include "koneksi.php";
 
 session_start();
 
-if (!isset($_SESSION['id_user'])) {
+if (!isset($_SESSION['username'])) {
     header("Location: login.php");
     exit();
 }
@@ -13,14 +13,24 @@ $sqlCategory = "SELECT * FROM category";
 $queryCategory = mysqli_query($koneksi, $sqlCategory);
 
 $selectedCategory = $_GET['category'] ?? '';
+$selectedStatus = $_GET['status'] ?? '';
 // $search = mysqli_real_escape_string($koneksi, $_GET['search'] ?? '');
+
+$id_user = $_SESSION['id_user'];
 
 $sql = "SELECT todo.*, category.category 
         FROM todo
         LEFT JOIN category ON todo.id_category = category.id_category 
-        WHERE id_user = '{$_SESSION['id_user']}'";
+        WHERE id_user = $id_user
+        ";
 
-if ($selectedCategory) $sql .= " AND category.id_category = '$selectedCategory'";
+if (!empty($selectedCategory)) {
+    $sql .= " AND category.id_category = '$selectedCategory'";
+}
+
+if (!empty($selectedStatus)) {
+    $sql .= " AND todo.status = '$selectedStatus'";
+}
 // if ($search) $sql .= " AND (todo.title LIKE '%$search%' OR todo.created_at LIKE '%$search%' OR todo.status LIKE '%$search%' OR category.category LIKE '%$search%')";
 
 $sql .= " ORDER BY FIELD(todo.status, 'pending', 'done'), todo.created_at DESC"; // Tambahkan ORDER BY di sini
@@ -55,7 +65,7 @@ $query = mysqli_query($koneksi, $sql);
 
         <div class="right-subnav">
             <form action="" method="GET">
-                <select name="category" id="category" onchange="this.form.submit()">
+                <select name="category" id="category">
                     <option value="">All Categories</option>
                     <?php while ($row = mysqli_fetch_assoc($queryCategory)) { ?>
                         <option value="<?= $row['id_category']; ?>" <?= ($selectedCategory == $row['id_category']) ? 'selected' : '' ?>>
@@ -63,6 +73,16 @@ $query = mysqli_query($koneksi, $sql);
                         </option>
                     <?php } ?>
                 </select>
+
+                <p>|</p>
+
+                <select name="status" id="status">
+                    <option value="">All Status</option>
+                    <option value="pending" <?= ($selectedStatus == 'pending')? 'selected' : '' ; ?>>Pending</option>
+                    <option value="done" <?= ($selectedStatus == 'done')? 'selected' : '' ; ?>>Done</option>
+                </select>
+
+                <button type="submit">Filter</button>
             </form>
         </div>
     </div>

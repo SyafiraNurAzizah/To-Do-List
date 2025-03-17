@@ -4,8 +4,8 @@ html, body {
 
 
 .subnav {
-    padding-top: 90px;
-    padding-bottom: 8px;
+    padding-top: 88px;
+    padding-bottom: 5.3px;
     display: flex;
     justify-content: space-between;
     width: 83.5%;
@@ -59,6 +59,12 @@ html, body {
 .subnav .right-subnav {
     float: right;
     padding-right: 25px;
+    position: relative;
+    bottom: 5px;
+}
+.subnav .right-subnav form {
+    display: flex;
+    gap: 20px;
 }
 .subnav .right-subnav form select {
     border: none;
@@ -67,6 +73,16 @@ html, body {
     font-size: 1rem;
     padding-right: 10px;
     text-transform: capitalize;
+}
+.subnav .right-subnav form p {
+    color: rgba(17, 17, 17, 0.4);
+}
+.subnav .right-subnav form button {
+    padding: 5px 25px 5px 25px;
+    border: 1px solid rgba(17, 17, 17);
+    border-radius: 50px;
+    color: white;
+    background-color: rgba(17, 17, 17);
 }
 
 
