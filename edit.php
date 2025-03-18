@@ -72,7 +72,7 @@ $selectedStatus = $rowEdit['status'];
 
                         <div class="bookmark">
                             <?php if ($rowEdit['bookmark'] == 1) {
-                                echo "<label><input type='checkbox' name='bookmark' value='0' checked>Bookmark</label>";
+                                echo "<label><input type='checkbox' name='bookmark' value='1' checked>Bookmark</label>";
                             } else {
                                 echo "<label><input type='checkbox' name='bookmark' value='1'>Bookmark</label>";
                             } ?>
