@@ -68,8 +68,19 @@ $selectedStatus = $rowEdit['status'];
                             </label>
                         </div>
 
-                        <button type="submit">Edit To-Do</button>
+                        <div class="line"></div>
+
+                        <div class="bookmark">
+                            <?php if ($rowEdit['bookmark'] == 1) {
+                                echo "<label><input type='checkbox' name='bookmark' value='0' checked>Bookmark</label>";
+                            } else {
+                                echo "<label><input type='checkbox' name='bookmark' value='1'>Bookmark</label>";
+                            } ?>
+                        </div>
+
+                        <!-- <button type="submit">Edit To-Do</button> -->
                     </div>
+                    <button type="submit">Edit To-Do</button>
                 </div>
             </form>
         </div>

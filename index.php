@@ -14,6 +14,7 @@ $queryCategory = mysqli_query($koneksi, $sqlCategory);
 
 $selectedCategory = $_GET['category'] ?? '';
 $selectedStatus = $_GET['status'] ?? '';
+$selectedBookmark = $_GET['bookmark'] ?? '';
 // $search = mysqli_real_escape_string($koneksi, $_GET['search'] ?? '');
 
 $id_user = $_SESSION['id_user'];
@@ -31,6 +32,11 @@ if (!empty($selectedCategory)) {
 if (!empty($selectedStatus)) {
     $sql .= " AND todo.status = '$selectedStatus'";
 }
+
+if (!empty($selectedBookmark)) {
+    $sql .= " AND todo.bookmark = '$selectedBookmark'";
+}
+
 // if ($search) $sql .= " AND (todo.title LIKE '%$search%' OR todo.created_at LIKE '%$search%' OR todo.status LIKE '%$search%' OR category.category LIKE '%$search%')";
 
 $sql .= " ORDER BY FIELD(todo.status, 'pending', 'done'), todo.created_at DESC"; // Tambahkan ORDER BY di sini
@@ -82,6 +88,13 @@ $query = mysqli_query($koneksi, $sql);
                     <option value="done" <?= ($selectedStatus == 'done')? 'selected' : '' ; ?>>Done</option>
                 </select>
 
+                <p>|</p>
+
+                <select name="bookmark" id="bookmark">
+                    <option value="">All</option>
+                    <option value="1" <?= ($selectedBookmark == 1)? 'selected' : '' ; ?>>Bookmark</option>
+                </select>
+
                 <button type="submit">Filter</button>
             </form>
         </div>
@@ -106,17 +119,31 @@ $query = mysqli_query($koneksi, $sql);
                     </div>
                     <h4><?= $todo['title']; ?></h4>
                     <p class="desc"><?= $todo['description']; ?></p>
-                    <div class="category">
-                        <?php 
-                            if ($todo['id_category'] == "1") {
-                                echo "<div class='work'><span>Work</span></div>";
-                            } elseif ($todo['id_category'] == "2") {
-                                echo "<div class='personal'><span>Personal</span></div>";
-                            } elseif ($todo['id_category'] == "3") {
-                                echo "<div class='other'><span>Other</span></div>";
-                            }
-                        ?>
+
+                    <div class="card-b">
+                        <div class="category">
+                            <?php 
+                                if ($todo['id_category'] == "1") {
+                                    echo "<div class='work'><span>Work</span></div>";
+                                } elseif ($todo['id_category'] == "2") {
+                                    echo "<div class='personal'><span>Personal</span></div>";
+                                } elseif ($todo['id_category'] == "3") {
+                                    echo "<div class='other'><span>Other</span></div>";
+                                }
+                            ?>
+                        </div>
+
+                        <div class="bookmark">
+                            <?php
+                                if ($todo['bookmark'] == "1") {
+                                    echo "<p class='bookmark'>★</p>";
+                                } else {
+                                    echo "<p class='no-bookmark'>☆</p>";
+                                }
+                            ?>
+                        </div>
                     </div>
+
                     <div class="aksi">
                         <a href="edit.php?id=<?= $todo['id_todo']; ?>" class="edit">Edit</a>
                         <a href="hapus.php?id=<?= $todo['id_todo']; ?>" class="hapus">Delete</a>

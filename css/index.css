@@ -136,7 +136,12 @@ html, body {
     background-color: rgba(255, 255, 255, 0.9);
     color: rgba(17, 17, 17, 0.9);
 }
-
+.card.done .bookmark p {
+    color: white;
+}
+.card.done .bookmark .no-bookmark {
+    color: rgba(255, 255, 255, 0.5);
+}
 
 .card-top {
     display: flex;
@@ -194,8 +199,25 @@ html, body {
     /* white-space: normal; */
 }
 
+
+.card-b {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.bookmark p {
+    font-size: 1.5rem;
+    position: relative;
+    bottom: 7px;
+    color: rgb(236, 134, 16);
+}
+.bookmark .no-bookmark {
+    color: rgba(17, 17, 17, 0.5);
+}
+
 .category .personal {
-    width: 30%;
+    width: 100%;
     font-size: 0.7rem;
     padding: 5px 15px;
     background-color: rgba(229, 130, 168, 0.181);
@@ -210,7 +232,7 @@ html, body {
     bottom: 1px;
 }
 .category .work {
-    width: 23.5%;
+    width: 100%;
     font-size: 0.7rem;
     padding: 5px 15px;
     background-color: rgba(130, 184, 229, 0.181);
@@ -225,7 +247,7 @@ html, body {
     bottom: 1px;
 }
 .category .other {
-    width: 25%;
+    width: 100%;
     font-size: 0.7rem;
     padding: 5px 15px;
     background-color: rgba(231, 223, 102, 0.181);
