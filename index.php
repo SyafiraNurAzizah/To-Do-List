@@ -39,7 +39,7 @@ if (!empty($selectedBookmark)) {
 
 // if ($search) $sql .= " AND (todo.title LIKE '%$search%' OR todo.created_at LIKE '%$search%' OR todo.status LIKE '%$search%' OR category.category LIKE '%$search%')";
 
-$sql .= " ORDER BY FIELD(todo.status, 'pending', 'done'), todo.created_at DESC"; // Tambahkan ORDER BY di sini
+$sql .= " ORDER BY FIELD(todo.status, 'pending', 'done'), FIELD(todo.bookmark, '1', '0'), todo.created_at DESC"; // Tambahkan ORDER BY di sini
 
 $query = mysqli_query($koneksi, $sql);
 
