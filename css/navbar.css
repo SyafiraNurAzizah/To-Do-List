@@ -22,9 +22,13 @@
 .navbar .container {
     display: flex;
     width: 85%;
-    gap: 76%;
     padding-top: 8px;
     text-wrap: nowrap;
+    justify-content: space-between;
+}
+.navbar .container p {
+    display: flex;
+    gap: 20px;
 }
 .navbar .container a {
     text-decoration: none;
