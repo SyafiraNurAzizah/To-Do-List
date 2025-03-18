@@ -25,10 +25,19 @@ while ($user = mysqli_fetch_assoc($query)) {
 <body>
     <div class="content">
         <div class="card">
-            <h2>Profil</h2>
-            <h3><?= $user['name']; ?></h3>
+            <h4>Profil</h4>
+            <h2><?= $user['username']; ?></h2>
             <p class="email"><?= $user['email']; ?></p>
-            <p class="birth"><?= date("d F Y", strtotime($user['birth_date'])); ?></p>
+
+            <div class="namee">
+                <label>Name</label>
+                <p class="name"><?= $user['name']; ?></p>
+            </div>
+
+            <div class="date">
+                <label>Birth Date</label>
+                <p class="birth"><?= date("d F Y", strtotime($user['birth_date'])); ?></p>
+            </div>
 
             <a href="logout.php">Logout</a>
         </div>
