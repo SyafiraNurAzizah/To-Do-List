@@ -48,3 +48,9 @@
     <li>Buka browser dan akses http://localhost/to-do-list/</li>
   </ul>
 </ol>
+
+
+<br><br><br>
+
+
+<p><i>⚠️ not responsive yet</i></p>
