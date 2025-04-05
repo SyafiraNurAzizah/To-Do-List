@@ -43,7 +43,7 @@ if (!isset($_SESSION['id_user'])) {
         <div class="input-form">
             <form action="proses/proses_tambah.php" method="POST">
                 <input type="text" name="title" id="title" placeholder="Enter your task for today..." required> <br>
-                <textarea type="text" name="description" id="description" placeholder="Enter additional details or description..." required></textarea> <br>
+                <textarea type="text" name="description" id="description" placeholder="Enter additional details or description..."></textarea> <br>
                 <div class="form-bottom">
                     <div class="sc">
                         <div class="category">

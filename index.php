@@ -91,7 +91,7 @@ $query = mysqli_query($koneksi, $sql);
                 <p>|</p>
 
                 <select name="bookmark" id="bookmark">
-                    <option value="">All</option>
+                    <option value="">All To-Do</option>
                     <option value="1" <?= ($selectedBookmark == 1)? 'selected' : '' ; ?>>Bookmark</option>
                 </select>
 
@@ -133,12 +133,12 @@ $query = mysqli_query($koneksi, $sql);
                             ?>
                         </div>
 
-                        <div class="bookmark">
+                        <div class="bm">
                             <?php
                                 if ($todo['bookmark'] == "1") {
-                                    echo "<p class='bookmark'>★</p>";
+                                    echo "<p class='bookmark'><a href='edit.php?id=" . $todo['id_todo'] . "'>★</a></p>";
                                 } else {
-                                    echo "<p class='no-bookmark'>☆</p>";
+                                    echo "<p class='no-bookmark'><a href='edit.php?id=" . $todo['id_todo'] . "'>☆</a></p>";
                                 }
                             ?>
                         </div>
