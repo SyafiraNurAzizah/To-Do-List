@@ -8,7 +8,7 @@ $sql = "DELETE FROM todo WHERE id_todo = '$id'";
 $query = mysqli_query($koneksi, $sql);
 
 if ($query) {
-    header ("Location: index.php");
+    echo "<script>alert('Item successfully deleted!'); window.location.href='../index.php';</script>";
 } else {
     header ("Location: index.php");
 }

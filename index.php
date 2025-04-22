@@ -146,7 +146,7 @@ $query = mysqli_query($koneksi, $sql);
 
                     <div class="aksi">
                         <a href="edit.php?id=<?= $todo['id_todo']; ?>" class="edit">Edit</a>
-                        <a href="hapus.php?id=<?= $todo['id_todo']; ?>" class="hapus">Delete</a>
+                        <a href="hapus.php?id=<?= $todo['id_todo']; ?>" class="edit" onclick="return confirm('Are you sure you want to delete this item?')">Delete</a>
                     </div>
                 </div>
             <?php } ?>

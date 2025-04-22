@@ -55,6 +55,11 @@ if (!isset($_SESSION['id_user'])) {
                                     echo "<label class='radio-label'><input type='radio' name='id_category' value='" . $category['id_category'] . "' required>" . $category['category'] . "</label><br>";
                                 }
                             ?>
+
+                            <div class="line"></div>
+
+                            <label class='radio-label'><input type="checkbox" name="bookmark" value="1">Bookmark</label>
+
                         </div>
 
                         <input type="hidden" name="status" id="status" value="pending">
