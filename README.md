@@ -7,7 +7,7 @@
 <br>
 
 <h3>Teknologi yang Digunakan</h3>
-<p>Bincang_ dikembangkan menggunakan teknologi berikut:</p>
+<p>To-Do List dikembangkan menggunakan teknologi berikut:</p>
 <ul>
     <li><b>Bahasa Pemrograman</b>: PHP (Native, tanpa framework)</li>
     <li><b>Database</b>: MySQL</li>
