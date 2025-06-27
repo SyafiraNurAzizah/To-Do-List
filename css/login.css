@@ -3,15 +3,18 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
     border: 1px solid rgb(17, 17, 17);
     border-radius: 10px;
-    width: 90%;
-    max-width: 300px;
-    min-height: 250px;
-    height: auto;
+    width: fit-content;
+    /* max-width: 300px; */
+    /* min-height: 250px; */
+    height: fit-content;
     padding: 15px 35px 30px 35px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -58,4 +61,19 @@ html, body {
 .container a {
     text-decoration: none;
     color: rgb(17, 17, 17);
+}
+
+
+@media screen and (max-height: 550px) {
+    html, body {
+        display: block;
+        overflow-y: auto;
+        height: auto;
+        padding: 40px 0;
+    }
+
+    .container {
+        margin: 0 auto;
+        height: fit-content;
+    }
 }
