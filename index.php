@@ -15,7 +15,6 @@ $queryCategory = mysqli_query($koneksi, $sqlCategory);
 $selectedCategory = $_GET['category'] ?? '';
 $selectedStatus = $_GET['status'] ?? '';
 $selectedBookmark = $_GET['bookmark'] ?? '';
-// $search = mysqli_real_escape_string($koneksi, $_GET['search'] ?? '');
 
 $id_user = $_SESSION['id_user'];
 
@@ -36,8 +35,6 @@ if (!empty($selectedStatus)) {
 if (!empty($selectedBookmark)) {
     $sql .= " AND todo.bookmark = '$selectedBookmark'";
 }
-
-// if ($search) $sql .= " AND (todo.title LIKE '%$search%' OR todo.created_at LIKE '%$search%' OR todo.status LIKE '%$search%' OR category.category LIKE '%$search%')";
 
 $sql .= " ORDER BY FIELD(todo.status, 'pending', 'done'), FIELD(todo.bookmark, '1', '0'), todo.created_at DESC"; // Tambahkan ORDER BY di sini
 

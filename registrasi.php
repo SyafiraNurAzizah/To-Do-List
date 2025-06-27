@@ -10,14 +10,13 @@
 <body>
     <div class="container">
         <h2>Sign Up</h2>
-        <!-- <p>Register to your account</p> -->
         <form action="proses/proses_register.php" method="POST">
             <div class="left">
                 <label>Full Name</label> <br>
                 <input type="text" name="name" id="name" placeholder="Enter your full name" required> <br>
 
                 <label>E-Mail</label> <br>
-                <input type="text" name="email" id="email" placeholder="Enter your e-mail" required> <br>
+                <input type="email" name="email" id="email" placeholder="Enter your e-mail" required> <br>
 
                 <label>Birth Date</label> <br>
                 <input type="date" name="birth_date" id="birth_date" required> <br>
