@@ -6,8 +6,8 @@
 
 <br>
 
-<h3>Teknologi yang Digunakan</h3>
-<p>To-Do List dikembangkan menggunakan teknologi berikut:</p>
+<h3>Stack yang Digunakan</h3>
+<p>To-Do List dikembangkan menggunakan:</p>
 <ul>
     <li><b>Bahasa Pemrograman</b>: PHP (Native, tanpa framework)</li>
     <li><b>Database</b>: MySQL</li>
